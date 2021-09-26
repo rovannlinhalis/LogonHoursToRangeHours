@@ -61,6 +61,7 @@ namespace AppExampleLogonHours
 23};
 
         List<Usuario> Usuarios = new List<Usuario>();
+        Usuario usuarioSelecionado;
         public Form1()
         {
             InitializeComponent();
@@ -76,8 +77,45 @@ namespace AppExampleLogonHours
             u2.SetHorariosLDAP(horarios2);
             Usuarios.Add(u2);
 
-        }
+            montarTabela();
 
+        }
+        private void montarTabela()
+        {
+            tableLayoutPanel1.Controls.Clear();
+            for (int h = 0; h <24; h++)
+            {
+                Label ld = new Label();
+                ld.AutoSize = true;
+                ld.Text = h.ToString("00");
+                ld.Font = new Font("Consolas", 6.5f, FontStyle.Regular);
+                tableLayoutPanel1.Controls.Add(ld, h+1, 0);
+            }    
+            for (int d = 0; d < 7; d++)
+            {
+                Label ld = new Label();
+                ld.AutoSize = true;
+                ld.Width = 90;
+                ld.Height = 30;
+                ld.Text = ((DayOfWeek)d).ToString();
+                tableLayoutPanel1.Controls.Add(ld,0, d+1);
+                for (int h = 0; h < 24; h++)
+                {
+                    CheckBox cb = new CheckBox();
+                    cb.FlatStyle = FlatStyle.Flat;
+                    cb.FlatAppearance.CheckedBackColor = Color.Blue;
+                    cb.BackColor = Color.White;
+                    cb.Appearance = Appearance.Button;
+                    cb.Text = "";
+                    cb.Width = 15;
+                    cb.Height = 30;
+                    cb.Tag = d + ";" + h;
+                    cb.AutoSize = false;
+                    cb.Name = "cb"+ d + ";" + h;
+                    tableLayoutPanel1.Controls.Add(cb, h+1, d+1);
+                }
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -93,14 +131,35 @@ namespace AppExampleLogonHours
         {
             if (dataGridViewUsuarios.SelectedRows.Count > 0)
             {
-                Usuario u = Usuarios[dataGridViewUsuarios.SelectedRows[0].Index];
-                dataGridViewHorarios.DataSource = u.Horarios;
+                usuarioSelecionado = Usuarios[dataGridViewUsuarios.SelectedRows[0].Index];
+                dataGridViewHorarios.DataSource = usuarioSelecionado.Horarios;
+
+                foreach (HorarioLDAP d in usuarioSelecionado.HorariosLDAP)
+                {
+                    for (int h = 0; h < d.Horas.Length; h++)
+                    {
+                        CheckBox cb = tableLayoutPanel1.GetControlFromPosition(h + 1, (int)d.Dia + 1) as CheckBox;
+                        if (cb!= null)
+                        {
+                            cb.Checked = d.Horas[h];
+                        }
+                    }
+                }
             }
         }
 
         private void dataGridViewHorarios_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             label1.Text = "Horarios Carregados";
+        }
+
+        private void buttonSalvarRange_Click(object sender, EventArgs e)
+        {
+            if (usuarioSelecionado != null)
+            {
+                byte[] dadosNovosHorarios = usuarioSelecionado.GetHorariosRange();
+                label1.Text ="Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dadosNovosHorarios);
+            }
         }
     }
 }
