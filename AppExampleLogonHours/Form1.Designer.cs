@@ -33,22 +33,27 @@ namespace AppExampleLogonHours
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonSalvarRange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewHorarios = new System.Windows.Forms.DataGridView();
             this.ColumnDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnInicio = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ColumnHoraFinal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.buttonSalvarRange = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.buttonSalvarLDAP = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.logonHoursControl1 = new AppExampleLogonHours.LogonHoursControl();
+            this.label10 = new System.Windows.Forms.Label();
+            this.buttonSalvarLogonHoursControl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +64,7 @@ namespace AppExampleLogonHours
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorarios)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,6 +103,7 @@ namespace AppExampleLogonHours
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -116,6 +123,16 @@ namespace AppExampleLogonHours
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Range";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonSalvarRange
+            // 
+            this.buttonSalvarRange.Location = new System.Drawing.Point(6, 263);
+            this.buttonSalvarRange.Name = "buttonSalvarRange";
+            this.buttonSalvarRange.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarRange.TabIndex = 2;
+            this.buttonSalvarRange.Text = "Salvar";
+            this.buttonSalvarRange.UseVisualStyleBackColor = true;
+            this.buttonSalvarRange.Click += new System.EventHandler(this.buttonSalvarRange_Click);
             // 
             // label1
             // 
@@ -161,6 +178,7 @@ namespace AppExampleLogonHours
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.buttonSalvarLDAP);
             this.tabPage2.Controls.Add(this.tableLayoutPanel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -171,15 +189,24 @@ namespace AppExampleLogonHours
             this.tabPage2.Text = "LDAP";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // buttonSalvarRange
+            // label9
             // 
-            this.buttonSalvarRange.Location = new System.Drawing.Point(6, 263);
-            this.buttonSalvarRange.Name = "buttonSalvarRange";
-            this.buttonSalvarRange.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvarRange.TabIndex = 2;
-            this.buttonSalvarRange.Text = "Salvar";
-            this.buttonSalvarRange.UseVisualStyleBackColor = true;
-            this.buttonSalvarRange.Click += new System.EventHandler(this.buttonSalvarRange_Click);
+            this.label9.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.label9.Location = new System.Drawing.Point(534, 265);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 211);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "012345678901234567890123456789";
+            // 
+            // buttonSalvarLDAP
+            // 
+            this.buttonSalvarLDAP.Location = new System.Drawing.Point(12, 269);
+            this.buttonSalvarLDAP.Name = "buttonSalvarLDAP";
+            this.buttonSalvarLDAP.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarLDAP.TabIndex = 3;
+            this.buttonSalvarLDAP.Text = "Salvar";
+            this.buttonSalvarLDAP.UseVisualStyleBackColor = true;
+            this.buttonSalvarLDAP.Click += new System.EventHandler(this.buttonSalvarLDAP_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -233,41 +260,14 @@ namespace AppExampleLogonHours
             this.tableLayoutPanel1.Size = new System.Drawing.Size(731, 227);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label2
+            // label7
             // 
-            this.label2.Location = new System.Drawing.Point(3, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Domingo";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(3, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Terça";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(3, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 30);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Quarta";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(3, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 30);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Quinta";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Location = new System.Drawing.Point(3, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 30);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Sabado";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -278,14 +278,32 @@ namespace AppExampleLogonHours
             this.label6.Text = "Sexta";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // label5
             // 
-            this.label7.Location = new System.Drawing.Point(3, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 30);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Sabado";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Location = new System.Drawing.Point(3, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Quinta";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(3, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 30);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Quarta";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(3, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Terça";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -296,14 +314,75 @@ namespace AppExampleLogonHours
             this.label8.Text = "Segunda";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonSalvarLDAP
+            // label2
             // 
-            this.buttonSalvarLDAP.Location = new System.Drawing.Point(12, 269);
-            this.buttonSalvarLDAP.Name = "buttonSalvarLDAP";
-            this.buttonSalvarLDAP.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvarLDAP.TabIndex = 3;
-            this.buttonSalvarLDAP.Text = "Salvar";
-            this.buttonSalvarLDAP.UseVisualStyleBackColor = true;
+            this.label2.Location = new System.Drawing.Point(3, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Domingo";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.buttonSalvarLogonHoursControl);
+            this.tabPage3.Controls.Add(this.logonHoursControl1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(745, 481);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Logon Hours Control";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // logonHoursControl1
+            // 
+            this.logonHoursControl1.Location = new System.Drawing.Point(6, 6);
+            this.logonHoursControl1.Name = "logonHoursControl1";
+            this.logonHoursControl1.Size = new System.Drawing.Size(477, 236);
+            this.logonHoursControl1.TabIndex = 0;
+            this.logonHoursControl1.Value = new byte[] {
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0)),
+        ((byte)(0))};
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.label10.Location = new System.Drawing.Point(525, 248);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 211);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "012345678901234567890123456789";
+            // 
+            // buttonSalvarLogonHoursControl
+            // 
+            this.buttonSalvarLogonHoursControl.Location = new System.Drawing.Point(19, 248);
+            this.buttonSalvarLogonHoursControl.Name = "buttonSalvarLogonHoursControl";
+            this.buttonSalvarLogonHoursControl.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarLogonHoursControl.TabIndex = 5;
+            this.buttonSalvarLogonHoursControl.Text = "Salvar";
+            this.buttonSalvarLogonHoursControl.UseVisualStyleBackColor = true;
+            this.buttonSalvarLogonHoursControl.Click += new System.EventHandler(this.buttonSalvarLogonHoursControl_Click);
             // 
             // Form1
             // 
@@ -324,6 +403,7 @@ namespace AppExampleLogonHours
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorarios)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -350,6 +430,11 @@ namespace AppExampleLogonHours
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSalvarLDAP;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage tabPage3;
+        private LogonHoursControl logonHoursControl1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buttonSalvarLogonHoursControl;
     }
 }
 

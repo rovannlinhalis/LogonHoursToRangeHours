@@ -145,6 +145,10 @@ namespace AppExampleLogonHours
                         }
                     }
                 }
+
+                //Control
+                logonHoursControl1.Value = usuarioSelecionado.GetHorariosLDAP();
+
             }
         }
 
@@ -160,6 +164,29 @@ namespace AppExampleLogonHours
                 byte[] dadosNovosHorarios = usuarioSelecionado.GetHorariosRange();
                 label1.Text ="Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dadosNovosHorarios);
             }
+        }
+
+        private void buttonSalvarLDAP_Click(object sender, EventArgs e)
+        {
+            foreach (HorarioLDAP d in usuarioSelecionado.HorariosLDAP)
+            {
+                for (int h = 0; h < d.Horas.Length; h++)
+                {
+                    CheckBox cb = tableLayoutPanel1.GetControlFromPosition(h + 1, (int)d.Dia + 1) as CheckBox;
+                    if (cb != null)
+                    {
+                        d.Horas[h] = cb.Checked;
+                    }
+                }
+            }
+            label9.Text = "Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(usuarioSelecionado.GetHorariosLDAP());
+
+        }
+
+        private void buttonSalvarLogonHoursControl_Click(object sender, EventArgs e)
+        {
+            byte[] dados = logonHoursControl1.Value;
+            label10.Text = "Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dados);
         }
     }
 }

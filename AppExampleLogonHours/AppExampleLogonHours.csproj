@@ -54,6 +54,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcoes.cs" />
+    <Compile Include="LogonHoursControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogonHoursControl.Designer.cs">
+      <DependentUpon>LogonHoursControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogonTime.cs" />
     <Compile Include="PermittedLogonTimes.cs" />
     <Compile Include="Program.cs" />
@@ -61,6 +67,9 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogonHoursControl.resx">
+      <DependentUpon>LogonHoursControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
