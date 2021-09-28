@@ -54,6 +54,8 @@ namespace AppExampleLogonHours
             this.label10 = new System.Windows.Forms.Label();
             this.buttonSalvarLogonHoursControl = new System.Windows.Forms.Button();
             this.logonHoursControl1 = new RLControls.LogonHoursControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -325,6 +327,8 @@ namespace AppExampleLogonHours
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.buttonSalvarLogonHoursControl);
             this.tabPage3.Controls.Add(this.logonHoursControl1);
@@ -359,6 +363,7 @@ namespace AppExampleLogonHours
             // 
             this.logonHoursControl1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.logonHoursControl1.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.logonHoursControl1.FusoHorario = -3;
             this.logonHoursControl1.Location = new System.Drawing.Point(6, 6);
             this.logonHoursControl1.MouseOverColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.logonHoursControl1.Name = "logonHoursControl1";
@@ -387,6 +392,26 @@ namespace AppExampleLogonHours
         ((byte)(0)),
         ((byte)(0))};
             this.logonHoursControl1.OnValueChanged += new RLControls.LogonHoursControl.ValueChangedHandler(this.logonHoursControl1_OnValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 294);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Set";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(19, 337);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Get";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -439,6 +464,8 @@ namespace AppExampleLogonHours
         private RLControls.LogonHoursControl logonHoursControl1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button buttonSalvarLogonHoursControl;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

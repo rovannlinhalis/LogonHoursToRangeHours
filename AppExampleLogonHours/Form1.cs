@@ -147,7 +147,9 @@ namespace AppExampleLogonHours
                 }
 
                 //Control
-                logonHoursControl1.Value = usuarioSelecionado.GetHorariosLDAP();
+                byte[] dados = usuarioSelecionado.GetHorariosLDAP();
+                //byte[] dados = { 0xff, 0xff, 0xff,0x07, 0x00, 0xf0, 0xff,0x3f, 0x00,0x00,0x00,0xff,0x07,0x00, 0xe0, 0xff,0x1f, 0x00,0x00,0x00,0xff };
+                logonHoursControl1.Value = dados;
 
             }
         }
@@ -193,6 +195,17 @@ namespace AppExampleLogonHours
         {
             byte[] dados = logonHoursControl1.Value;
             label10.Text = "Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dados);
+        }
+
+        byte[] testeDados = { 0xff, 0xff, 0xff, 0x07, 0x00, 0xf0, 0xff, 0x3f, 0x00, 0x00, 0x00, 0xff, 0x07, 0x00, 0xe0, 0xff, 0x1f, 0x00, 0x00, 0x00, 0xff };
+        private void button1_Click(object sender, EventArgs e)
+        {
+            logonHoursControl1.Value = testeDados;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            testeDados = logonHoursControl1.Value;
         }
     }
 }
