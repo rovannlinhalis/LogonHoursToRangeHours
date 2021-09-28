@@ -8,8 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppExampleLogonHours
+namespace RLControls
 {
+    /// <summary>
+    /// LogonHours Winforms Control
+    /// Represents a LDAP user logon hours data (byte[])
+    /// V1 27/09/2021
+    /// Rovann Linhalis
+    /// rovann@gmail.com
+    /// </summary>
     public partial class LogonHoursControl : UserControl
     {
         Dictionary<string, CheckBox> checkBoxes = new Dictionary<string, CheckBox>();
@@ -143,6 +150,16 @@ namespace AppExampleLogonHours
             return string.Join("", data.Select(x => Convert.ToString(x, 2).PadLeft(8, '0')));
 
             return "";
+        }
+        int clickCount = 0;
+        private void label31_Click(object sender, EventArgs e)
+        {
+            clickCount++;
+            if (clickCount >= 10)
+            {
+                clickCount = 0;
+                MessageBox.Show("Criado por Rovann Linhalis - rovann@gmail.com", "Logon Hours Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

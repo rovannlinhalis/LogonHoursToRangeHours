@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>RLControls</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="LogonHoursControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LogonHoursControl.Designer.cs">
+      <DependentUpon>LogonHoursControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LogonHoursControl.resx">
+      <DependentUpon>LogonHoursControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

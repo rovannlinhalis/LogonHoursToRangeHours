@@ -51,7 +51,7 @@ namespace AppExampleLogonHours
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.logonHoursControl1 = new AppExampleLogonHours.LogonHoursControl();
+            this.logonHoursControl1 =  new RLControls.LogonHoursControl();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonSalvarLogonHoursControl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -432,7 +432,7 @@ namespace AppExampleLogonHours
         private System.Windows.Forms.Button buttonSalvarLDAP;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabPage tabPage3;
-        private LogonHoursControl logonHoursControl1;
+        private RLControls.LogonHoursControl logonHoursControl1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button buttonSalvarLogonHoursControl;
     }

@@ -1,5 +1,5 @@
 ﻿
-namespace AppExampleLogonHours
+namespace RLControls
 {
     partial class LogonHoursControl
     {
@@ -156,13 +156,14 @@ namespace AppExampleLogonHours
             this.label31.Text = "?";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.label31, "Clique no título (Dia da semana ou Hora) para inverter toda a linha/coluna");
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // labelDow1
             // 
             this.labelDow1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDow1.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.labelDow1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.labelDow1.Location = new System.Drawing.Point(4, 17);
             this.labelDow1.Name = "labelDow1";
             this.labelDow1.Size = new System.Drawing.Size(84, 30);
@@ -176,7 +177,7 @@ namespace AppExampleLogonHours
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.Location = new System.Drawing.Point(4, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 30);
@@ -190,7 +191,7 @@ namespace AppExampleLogonHours
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.Location = new System.Drawing.Point(4, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 30);
@@ -204,7 +205,7 @@ namespace AppExampleLogonHours
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(4, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 30);
@@ -218,7 +219,7 @@ namespace AppExampleLogonHours
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label4.Location = new System.Drawing.Point(4, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 30);
@@ -232,7 +233,7 @@ namespace AppExampleLogonHours
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label5.Location = new System.Drawing.Point(4, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 30);
@@ -246,7 +247,7 @@ namespace AppExampleLogonHours
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label6.Location = new System.Drawing.Point(4, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 32);
