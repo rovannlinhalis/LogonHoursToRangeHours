@@ -188,5 +188,11 @@ namespace AppExampleLogonHours
             byte[] dados = logonHoursControl1.Value;
             label10.Text = "Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dados);
         }
+
+        private void logonHoursControl1_OnValueChanged(object sender, EventArgs e)
+        {
+            byte[] dados = logonHoursControl1.Value;
+            label10.Text = "Dados Salvos\n" + Funcoes.BinaryStringFromByteArray(dados);
+        }
     }
 }

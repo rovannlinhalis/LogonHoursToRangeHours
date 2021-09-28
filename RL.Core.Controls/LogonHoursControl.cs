@@ -25,6 +25,10 @@ namespace RLControls
             InitializeComponent();
             MontarCheckBoxes();
         }
+
+        public delegate void ValueChangedHandler(object sender, EventArgs e);
+        public event ValueChangedHandler OnValueChanged;
+
         private void MontarCheckBoxes()
         {
             for (int d = 0; d < 7; d++)
@@ -46,6 +50,9 @@ namespace RLControls
                     cb.AutoSize = false;
                     cb.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
                     cb.Name = "cb" + d + ";" + h;
+                    cb.CheckedChanged += (ss, ee) => {
+                        OnValueChanged?.Invoke(ss, ee);
+                    };
                     checkBoxes.Add(cb.Name, cb);
                     tableLayoutPanel1.Controls.Add(cb, h + 1, d + 1);
                 }
@@ -88,7 +95,41 @@ namespace RLControls
                 }
             }
         }
+        Color checkedColor, backgroundColor, mouseOverColor;
 
+        public Color CheckedColor
+        {
+            get => checkedColor;
+            set
+            {
+                checkedColor = value;
+                foreach (var kp in checkBoxes)
+                    kp.Value.FlatAppearance.CheckedBackColor = checkedColor;
+
+            }
+        }
+        [Browsable(true)]
+        public Color BackgroundColor
+        {
+            get => backgroundColor;
+            set
+            {
+                backgroundColor = value;
+                foreach (var kp in checkBoxes)
+                    kp.Value.BackColor = backgroundColor;
+            }
+        }
+        [Browsable(true)]
+        public Color MouseOverColor
+        {
+            get => mouseOverColor;
+            set
+            {
+                mouseOverColor = value;
+                foreach (var kp in checkBoxes)
+                    kp.Value.FlatAppearance.MouseOverBackColor = mouseOverColor;
+            }
+        }
 
         public void Limpar()
         {
@@ -152,7 +193,7 @@ namespace RLControls
             return "";
         }
         int clickCount = 0;
-        private void label31_Click(object sender, EventArgs e)
+        private void labelHelp_Click(object sender, EventArgs e)
         {
             clickCount++;
             if (clickCount >= 10)

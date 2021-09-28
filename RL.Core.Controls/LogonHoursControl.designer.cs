@@ -156,7 +156,7 @@ namespace RLControls
             this.label31.Text = "?";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.label31, "Clique no título (Dia da semana ou Hora) para inverter toda a linha/coluna");
-            this.label31.Click += new System.EventHandler(this.label31_Click);
+            this.label31.Click += new System.EventHandler(this.labelHelp_Click);
             // 
             // labelDow1
             // 

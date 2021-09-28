@@ -3,14 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>RLControls</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Update="LogonHoursControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="LogonHoursControl.Designer.cs">
+    <Compile Update="LogonHoursControl.designer.cs">
       <DependentUpon>LogonHoursControl.cs</DependentUpon>
     </Compile>
   </ItemGroup>

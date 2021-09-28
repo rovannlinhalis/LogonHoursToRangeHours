@@ -357,10 +357,10 @@ namespace AppExampleLogonHours
             // 
             // logonHoursControl1
             // 
-            this.logonHoursControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.logonHoursControl1.CheckedColor = System.Drawing.Color.Fuchsia;
+            this.logonHoursControl1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.logonHoursControl1.CheckedColor = System.Drawing.Color.MediumAquamarine;
             this.logonHoursControl1.Location = new System.Drawing.Point(6, 6);
-            this.logonHoursControl1.MouseOverColor = System.Drawing.Color.Empty;
+            this.logonHoursControl1.MouseOverColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.logonHoursControl1.Name = "logonHoursControl1";
             this.logonHoursControl1.Size = new System.Drawing.Size(477, 236);
             this.logonHoursControl1.TabIndex = 0;
@@ -386,6 +386,7 @@ namespace AppExampleLogonHours
         ((byte)(0)),
         ((byte)(0)),
         ((byte)(0))};
+            this.logonHoursControl1.OnValueChanged += new RLControls.LogonHoursControl.ValueChangedHandler(this.logonHoursControl1_OnValueChanged);
             // 
             // Form1
             // 

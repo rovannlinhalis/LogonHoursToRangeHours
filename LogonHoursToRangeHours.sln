@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppExampleLogonHours", "App
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RL.NET.Controls", "RL.NET.Controls\RL.NET.Controls.csproj", "{68D63EA0-E414-4128-8CC1-FCDEBA960F62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RL.Core.Controls", "RL.Core.Controls\RL.Core.Controls.csproj", "{D9B7197E-0A91-48B1-96D8-81AF517E86EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{68D63EA0-E414-4128-8CC1-FCDEBA960F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D63EA0-E414-4128-8CC1-FCDEBA960F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D63EA0-E414-4128-8CC1-FCDEBA960F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B7197E-0A91-48B1-96D8-81AF517E86EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B7197E-0A91-48B1-96D8-81AF517E86EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B7197E-0A91-48B1-96D8-81AF517E86EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B7197E-0A91-48B1-96D8-81AF517E86EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
