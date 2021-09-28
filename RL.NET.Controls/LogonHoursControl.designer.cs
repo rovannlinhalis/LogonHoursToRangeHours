@@ -550,6 +550,7 @@ namespace RLControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
+            this.MinimumSize = new System.Drawing.Size(476, 236);
             this.Name = "LogonHoursControl";
             this.Size = new System.Drawing.Size(476, 236);
             this.tableLayoutPanel1.ResumeLayout(false);
