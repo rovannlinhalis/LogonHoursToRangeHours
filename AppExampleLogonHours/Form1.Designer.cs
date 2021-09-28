@@ -51,9 +51,9 @@ namespace AppExampleLogonHours
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.logonHoursControl1 =  new RLControls.LogonHoursControl();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonSalvarLogonHoursControl = new System.Windows.Forms.Button();
+            this.logonHoursControl1 = new RLControls.LogonHoursControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -336,9 +336,31 @@ namespace AppExampleLogonHours
             this.tabPage3.Text = "Logon Hours Control";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.label10.Location = new System.Drawing.Point(525, 248);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 211);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "012345678901234567890123456789";
+            // 
+            // buttonSalvarLogonHoursControl
+            // 
+            this.buttonSalvarLogonHoursControl.Location = new System.Drawing.Point(19, 248);
+            this.buttonSalvarLogonHoursControl.Name = "buttonSalvarLogonHoursControl";
+            this.buttonSalvarLogonHoursControl.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarLogonHoursControl.TabIndex = 5;
+            this.buttonSalvarLogonHoursControl.Text = "Salvar";
+            this.buttonSalvarLogonHoursControl.UseVisualStyleBackColor = true;
+            this.buttonSalvarLogonHoursControl.Click += new System.EventHandler(this.buttonSalvarLogonHoursControl_Click);
+            // 
             // logonHoursControl1
             // 
+            this.logonHoursControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.logonHoursControl1.CheckedColor = System.Drawing.Color.Fuchsia;
             this.logonHoursControl1.Location = new System.Drawing.Point(6, 6);
+            this.logonHoursControl1.MouseOverColor = System.Drawing.Color.Empty;
             this.logonHoursControl1.Name = "logonHoursControl1";
             this.logonHoursControl1.Size = new System.Drawing.Size(477, 236);
             this.logonHoursControl1.TabIndex = 0;
@@ -364,25 +386,6 @@ namespace AppExampleLogonHours
         ((byte)(0)),
         ((byte)(0)),
         ((byte)(0))};
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Consolas", 11.25F);
-            this.label10.Location = new System.Drawing.Point(525, 248);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 211);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "012345678901234567890123456789";
-            // 
-            // buttonSalvarLogonHoursControl
-            // 
-            this.buttonSalvarLogonHoursControl.Location = new System.Drawing.Point(19, 248);
-            this.buttonSalvarLogonHoursControl.Name = "buttonSalvarLogonHoursControl";
-            this.buttonSalvarLogonHoursControl.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvarLogonHoursControl.TabIndex = 5;
-            this.buttonSalvarLogonHoursControl.Text = "Salvar";
-            this.buttonSalvarLogonHoursControl.UseVisualStyleBackColor = true;
-            this.buttonSalvarLogonHoursControl.Click += new System.EventHandler(this.buttonSalvarLogonHoursControl_Click);
             // 
             // Form1
             // 
